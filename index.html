@@ -9,11 +9,6 @@
 
         body{
             counter-reset: Score;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: linear-gradient(to top, rgb(204, 204, 204),white);
-            height: 100vh;
         }
         
         .Layer input[type="checkbox"]:checked {
@@ -45,7 +40,9 @@
             box-sizing: border-box;
             background: rgb(111, 169, 255);
             box-shadow:  -0px -3px 20px 1px rgb(39, 39, 39)   ;
-            margin: 50px;
+            margin: 0;
+            margin-top: 15px;
+            
             border-radius: 10%;
             width: 300px;
             height: 500px;
@@ -333,6 +330,7 @@
         }
 
         .Camara{
+            top: 0;
             width: 30px;
             height: 20px;
             background: black;
@@ -351,9 +349,19 @@
             background: rgb(51, 51, 51);
             border-radius: 50%;
         }
+        .Fondo{
+            position: absolute;
+            width: 100%;
+            background: linear-gradient(to top, rgb(204, 204, 204),white);
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+            
+        }
     </style>
 </head>
 <body>
+    <div class="Fondo">
     <div class="Phone">
         <div class="Camara"> 
             <div class="Lente"></div>
@@ -440,6 +448,6 @@
         </h2>
 
     </div>
-
+</div>
 </body>
 </html>
