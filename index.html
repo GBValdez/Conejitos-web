@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body{
+            counter-reset: Score;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to top, rgb(204, 204, 204),white);
+            height: 100vh;
+        }
+        
+        .Layer input[type="checkbox"]:checked {
+            counter-increment: Score;
+        }
+
+        .Layer input[type="checkbox"]{
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            height: 90px;
+            width: 70px;
+            cursor: pointer;    
+            appearance: none;
+        }
+
+        .Puntuaje{
+            text-align: center;
+        }
+        
+        .Puntuaje::after{
+            content: counter(Score);   
+        }
+
+        .Phone{
+            box-sizing: border-box;
+            background: rgb(111, 169, 255);
+            box-shadow:  -0px -3px 20px 1px rgb(39, 39, 39)   ;
+            margin: 50px;
+            border-radius: 10%;
+            width: 300px;
+            height: 500px;
+            border: 7px solid black;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .Layer{
+            position: absolute;
+        }
+
+        .Index-1{
+            z-index: 1;
+            height: 400px;
+            width: 70px;
+            bottom: 0;
+            left: 60px;
+            animation: Conejos 3s alternate infinite ease-in-out;
+
+        }
+
+  
+        @keyframes Conejos{
+            0%{
+                transform: translateY(0);
+            }
+
+            100%{
+                transform: translateY(100px);
+                
+            }
+        }
+
+        .Index-2{
+            z-index: 2;
+            height: 400px;
+            width: 70px;
+            bottom: 0;
+            right: 60px;
+            animation: Conejos 3s 3s alternate infinite ease-in-out;
+        }
+
+
+        .Index-3{
+            z-index: 3;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            height: 340px;
+            width: 200px;
+            bottom: 0px;
+            background: rgb(228, 94, 16);
+            border-radius: 10% 10% 0 0;
+            box-shadow: 0px 10px 10px  rgba(0, 0, 0, 0.438);
+        }
+
+        .Index-4{
+            z-index: 4;
+            height: 290px;
+            width: 70px;
+            bottom: 0;
+            left: 30px;
+            animation: Conejos 1s  alternate infinite ease-in;
+        }
+
+        .Index-5{
+            z-index: 5;
+            left: 20px;
+            height: 230px;
+            width: 150px;
+            bottom: 0px;
+            border-radius: 10% 10% 0 0;
+            background: rgb(228, 94, 16);
+            box-shadow: 0px 10px 10px  rgba(0, 0, 0, 0.438);
+        }
+
+        .Index-6{
+            z-index: 6;
+            height: 210px;
+            width: 70px;
+            bottom: 0;
+            right: 30px;
+            animation: Conejos 5s  alternate infinite ease-in;
+        }
+
+        .Index-7{
+            z-index: 7;
+            right: 20px;
+            height: 150px;
+            width: 150px;
+            bottom: 0px;
+            background: rgb(228, 94, 16);
+            border-radius: 10% 10% 0 0;
+            box-shadow: 0px 10px 10px  rgba(0, 0, 0, 0.438);
+        }
+
+        .Index-8{
+            z-index: 8;
+            right: 0;
+            left: 0;
+            margin: 0 auto;
+            height: 120px;
+            width: 90px;
+            bottom: 0px;
+            border-radius: 40% 40% 0px 0px;
+            background: rgb(1, 207, 36);
+            box-shadow: 0px 10px 10px  rgba(0, 0, 0, 0.438);
+        }
+
+        .Index-9{
+            z-index: 9;
+            right: 0;
+            left: 40px;
+            height: 90px;
+            width: 90px;
+            bottom: 0px;
+            border-radius: 40% 40% 0px 0px;
+            background: rgb(1, 207, 36);
+            box-shadow: 0px 10px 10px  rgba(0, 0, 0, 0.438);
+        }
+
+        .Index-10{
+            z-index: 10;
+            right: 0;
+            right: 40px;
+            height: 90px;
+            width: 90px;
+            bottom: 0px;
+            border-radius: 40% 40% 0px 0px;
+            background: rgb(1, 207, 36);
+            box-shadow: 0px 10px 10px  rgba(0, 0, 0, 0.438);
+        }
+
+        .Index-11{
+            z-index: 11;
+            bottom: 0;
+            background: white;
+            width: 50px;
+            height: 70px;
+            border-radius: 25% 25% 0 60%;
+            box-shadow: 0px 10px 10px  rgba(0, 0, 0, 0.438);
+        }
+
+        .Index-12{
+            z-index: 11;
+            bottom: 0;
+            background: white;
+            width: 70px;
+            height: 50px;
+            border-radius: 0 20px 20px 60%;
+            box-shadow: 0px 10px 10px  rgba(0, 0, 0, 0.438);
+        }
+
+        .Index-13{
+            right: 0;
+            z-index: 11;
+            bottom: 0;
+            background: white;
+            width: 50px;
+            height: 70px;
+            border-radius: 25% 25% 0 60%;
+            box-shadow: 0px 10px 10px  rgba(0, 0, 0, 0.438);
+        }
+
+        .Index-14{
+            right: 0;
+            z-index: 11;
+            bottom: 0;
+            background: white;
+            width: 70px;
+            height: 50px;
+            border-radius:  20px 0 20px   60% ;
+            box-shadow: 0px 10px 10px  rgba(0, 0, 0, 0.438);
+        }
+        .ear--outer{
+            background-color: white;
+            border-radius: 90%;
+            width: 20px;
+            height: 50px;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform: translateY(5px);
+            box-shadow: 0px 10px 10px  rgba(0, 0, 0, 0.438);
+            transform-origin: bottom;
+            animation: Mover_orejas 3s infinite;
+        }
+        @keyframes Mover_orejas{
+            from{
+                transform: rotate(0deg);
+                transform-origin: bottom;
+            }
+            
+            5%{
+                transform: rotate(2deg);
+                transform-origin: bottom;
+            }
+            10%{
+                transform: rotate(-2deg);
+                transform-origin: bottom;
+            }
+            15%{
+                transform: rotate(0deg);
+                transform-origin: bottom;
+            }
+
+        }
+
+        .ear--inner{
+            background-color: rgb(247, 120, 215);
+            border-radius: 80%;
+            width: 10px;
+            height: 30px;
+            box-shadow: inset 0px 10px 5px   rgba(0, 0, 0, 0.438);
+        }
+
+        .ear-left{
+            left: 0;
+        }
+        .ear-right{
+            right: 0;
+        }
+        .Head{
+            background: rgb(250, 250, 250);
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            transform: translateY(30px);
+            width: 100%;
+            border-radius: 90% 90% 0 0;
+            box-shadow: 0px 10px 10px  rgba(0, 0, 0, 0.438);
+        }
+        .head__eye{
+            background: black;
+            height: 10px;
+            width: 5px;
+            border-radius: 50%;
+            position: absolute;
+            top: 10px;
+            transform-origin: bottom;
+            animation: Parpadeo 5s infinite ease-out;
+        }
+
+        @keyframes Parpadeo{
+            from{
+                transform: scale(1,1);
+                transform-origin: bottom;
+            }
+
+            3%{
+                transform: scale(2,0.5);
+                transform-origin: bottom;
+            }
+            10%{
+                transform: scale(1,1);
+                transform-origin: bottom;
+            }
+
+        }
+        .head__eye--left{
+            left: 25px;
+        }
+        .head__eye--right{
+            right: 25px;
+        }
+        .SombraCima{
+            width: 100%;
+            height: 120px;
+            background: linear-gradient(135deg, rgb(172, 69, 10) 25%, transparent 25%) 0px 0,
+                linear-gradient(-135deg, rgb(172, 69, 10) 25%, transparent 25%) -0px 0;
+            background-size: 50px 120px;
+            position: absolute;
+            transform: translateY(10px);
+        }
+        .Cima{
+            position: absolute;
+            width: 100%;
+            height: 120px;
+            border-radius: 10% 10% 0 0;
+            background: linear-gradient(135deg, greenyellow 25%, transparent 25%) 0px 0,
+                linear-gradient(-135deg, greenyellow 25%, transparent 25%) -0px 0;
+            background-size: 50px 120px;
+        }
+    </style>
+</head>
+<body>
+    <div class="Phone">
+        <div class="Layer Index-1">
+            <input type="checkbox">
+            <div class="ear--outer ear-left">
+                <div class="ear--inner "></div>
+            </div>
+            <div class="ear--outer ear-right">
+                <div class="ear--inner"></div>
+            </div>
+            <div class="Head">
+                <div class="head__eye head__eye--left"></div>
+                <div class="head__eye head__eye--right"></div>
+            </div>
+        </div>
+        
+        <div class="Layer Index-2">
+            <input type="checkbox">
+            <div class="ear--outer ear-left">
+                <div class="ear--inner "></div>
+            </div>
+            <div class="ear--outer ear-right">
+                <div class="ear--inner"></div>
+            </div>
+            <div class="Head">
+                <div class="head__eye head__eye--left"></div>
+                <div class="head__eye head__eye--right"></div>
+            </div>
+        </div>
+        
+        <div class="Layer Index-3">
+            <div class="SombraCima"></div>
+            <div class="Cima"></div>
+            
+        </div>
+        
+        <div class="Layer Index-4">
+            <input type="checkbox">
+            <div class="ear--outer ear-left">
+                <div class="ear--inner "></div>
+            </div>
+            <div class="ear--outer ear-right">
+                <div class="ear--inner"></div>
+            </div>
+            <div class="Head">
+                <div class="head__eye head__eye--left"></div>
+                <div class="head__eye head__eye--right"></div>
+            </div>
+        </div>
+
+        <div class="Layer Index-5">
+            <div class="SombraCima"></div>
+            <div class="Cima"></div>
+        </div>
+
+        <div class="Layer Index-6">
+            <input type="checkbox">
+            <div class="ear--outer ear-left">
+                <div class="ear--inner "></div>
+            </div>
+            <div class="ear--outer ear-right">
+                <div class="ear--inner"></div>
+            </div>
+            <div class="Head">
+                <div class="head__eye head__eye--left"></div>
+                <div class="head__eye head__eye--right"></div>
+            </div>
+        </div>
+        <div class="Layer Index-7">
+            <div class="SombraCima"></div>
+            <div class="Cima"></div>
+        </div>
+        <div class="Layer Index-8"></div>
+        <div class="Layer Index-9"></div>
+        <div class="Layer Index-10"></div>
+        <div class="Layer Index-11"></div>
+        <div class="Layer Index-12"></div>
+        <div class="Layer Index-13"></div>
+        <div class="Layer Index-14"></div>
+        <h2 class="Puntuaje">
+            Score:   
+        </h2>
+
+    </div>
+
+</body>
+</html>
